@@ -33,7 +33,7 @@ namespace Smx.PDBSharp.Dumper
 		public static bool OptPrintFpo = false;
 		public static bool OptPrintSc = false;
 		public static bool OptPrintSyms = false;
-		public static bool OptPrintTypes = false;
+		public static bool OptPrintTypes = true;
 		public static bool OptPrintTpiHash = false;
 
 		private static void ParseArguments(string[] args) {
@@ -192,6 +192,7 @@ namespace Smx.PDBSharp.Dumper
 			foreach(var type in tpi.Types) {
 				if (OptPrintTypes) {
 					Console.WriteLine(type.Type);
+						Console.WriteLine(type.ToString());
 				}
 			}
 
